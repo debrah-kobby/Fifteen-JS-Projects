@@ -18,3 +18,19 @@ textarea {
   font: inherit;
 }
 /*RESET*/
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  width: 100%;
+}
+
+img {
+  display: none;
+  width: 650px;
+}
+
+img.displayImage {
+  display: block;
+}
