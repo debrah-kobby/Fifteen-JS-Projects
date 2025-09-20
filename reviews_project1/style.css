@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*//RESET*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+a,
+button,
+textarea {
+  font: inherit;
+}
+/*RESET*/
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: hsl(210, 36%, 96%);
+  color: hsl(209, 61%, 16%);
+}
+
+h2,
+h4 {
+  text-transform: capitalize;
+  margin-bottom: 0.75rem;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  margin-bottom: 1.2rem;
+  color: hsl(210, 22%, 49%);
+}
+
+/*  global classes */
+
+/* section */
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.underline {
+  height: 0.25rem;
+  width: 5rem;
+  background: hsl(0, 78%, 60%);
+  margin-left: auto;
+  margin-right: auto;
+}
+.add_a_review {
+  margin-bottom: 0.5rem;
+}
+.add_a_review_button {
+  padding: 0.3rem 0.5rem;
+  border-radius: 7px;
+  border: none;
+  background: rgba(255, 92, 92, 0.1);
+  backdrop-filter: blur(6px);
+  color: rgba(255, 0, 0, 0.6);
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  font-weight: bold;
+
+  /* new additions */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add_a_review_button:hover {
+  background-color: rgba(255, 6, 6, 0.377);
+  color: rgba(255, 0, 0, 0.85);
+
+  /* new additions */
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  width: 80vw;
+  max-width: 620px;
+}
+.review,
+.reviewForm {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s linear;
+  text-align: center;
+}
+
+.review:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.img-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+#person-img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+}
+.img-container::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f10e";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transform: translateY(25%);
+  background: hsl(0, 78%, 60%);
+  color: #fff;
+}
+.img-container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: hsl(0, 78%, 60%);
+  position: absolute;
+  top: -0.25rem;
+  right: -0.5rem;
+  border-radius: 50%;
+}
+#author {
+  margin-bottom: 0.25rem;
+}
+#job {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: hsl(0, 78%, 60%);
+  font-size: 0.85rem;
+}
+#info {
+  margin-bottom: 0.75rem;
+}
+.prev-btn,
+.next-btn {
+  color: hsl(0, 87%, 55%);
+  font-size: 1.25rem;
+  background: transparent;
+  border-color: transparent;
+  margin: 0 0.5rem;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.prev-btn:hover,
+.next-btn:hover {
+  color: hsl(205, 78%, 60%);
+}
+.reviewForm {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s linear;
+  text-align: center;
+
+  width: 80vw;
+  max-width: 650px;
+  display: none;
+}
+.title2 {
+  display: flex;
+}
+.closeBtn_div {
+  margin-left: auto;
+}
+.closeBtn {
+  font-size: 1.4rem;
+  font-weight: bold;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.actual_form {
+  margin-right: auto;
+}
+.name_input_label {
+  display: flex;
+  flex-direction: column;
+}
+.name_label_form {
+  margin-right: auto;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: rgb(63, 63, 63);
+}
+.form_imputs {
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid rgb(192, 192, 192);
+  padding: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.form_imputs::placeholder {
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+.custom-file-upload {
+  display: inline-block;
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: #080146;
+
+  color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+  width: 110px;
+  margin-top: 0.2rem;
+}
+
+.custom-file-upload:hover,
+.submitBtn:hover {
+  background-color: #444;
+}
+
+#file-chosen {
+  font-size: 14px;
+  color: #555;
+  margin-right: auto;
+  margin-top: 0.2rem;
+}
+.image_and_job_div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.job_on_form {
+  margin-left: auto;
+  margin-top: 0.8rem;
+}
+@media screen and (max-width: 768px) {
+  .job_on_form {
+    margin-left: 0;
+  }
+}
+.submit_button_form {
+  margin-top: 0.4rem;
+}
+
+.submitBtn {
+  padding: 5px;
+  cursor: pointer;
+  background-color: #080146;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+  width: 110px;
+  border: none;
+}
+/* local reviews data
+const reviews = [
+  {
+    id: 1,
+    name: 'susan smith',
+    job: 'web developer',
+    img: 'https://www.course-api.com/images/people/person-1.jpeg',
+    text: "I'm baby meggings twee health goth +1. Bicycle rights tumeric chartreuse before they sold out chambray pop-up. Shaman humblebrag pickled coloring book salvia hoodie, cold-pressed four dollar toast everyday carry",
+  },
+  {
+    id: 2,
+    name: 'anna johnson',
+    job: 'web designer',
+    img: 'https://www.course-api.com/images/people/person-2.jpeg',
+    text: 'Helvetica artisan kinfolk thundercats lumbersexual blue bottle. Disrupt glossier gastropub deep v vice franzen hell of brooklyn twee enamel pin fashion axe.photo booth jean shorts artisan narwhal.',
+  },
+  {
+    id: 3,
+    name: 'peter jones',
+    job: 'intern',
+    img: 'https://www.course-api.com/images/people/person-4.jpeg',
+    text: 'Sriracha literally flexitarian irony, vape marfa unicorn. Glossier tattooed 8-bit, fixie waistcoat offal activated charcoal slow-carb marfa hell of pabst raclette post-ironic jianbing swag.',
+  },
+  {
+    id: 4,
+    name: 'bill anderson',
+    job: 'the boss',
+    img: 'https://www.course-api.com/images/people/person-3.jpeg',
+    text: 'Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ',
+  },
+];
+// select items
+const img = document.getElementById('person-img');
+const author = document.getElementById('author');
+const job = document.getElementById('job');
+const info = document.getElementById('info');
+
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const randomBtn = document.querySelector('.random-btn');
+
+// set starting item
+let currentItem = 0;
+
+// load initial item
+window.addEventListener('DOMContentLoaded', function () {
+  const item = reviews[currentItem];
+  img.src = item.img;
+  author.textContent = item.name;
+  job.textContent = item.job;
+  info.textContent = item.text;
+});
+
+// show person based on item
+function showPerson(person) {
+  const item = reviews[person];
+  img.src = item.img;
+  author.textContent = item.name;
+  job.textContent = item.job;
+  info.textContent = item.text;
+}
+// show next person
+nextBtn.addEventListener('click', function () {
+  currentItem++;
+  if (currentItem > reviews.length - 1) {
+    currentItem = 0;
+  }
+  showPerson(currentItem);
+});
+// show prev person
+prevBtn.addEventListener('click', function () {
+  currentItem--;
+  if (currentItem < 0) {
+    currentItem = reviews.length - 1;
+  }
+  showPerson(currentItem);
+});
+// show random person
+randomBtn.addEventListener('click', function () {
+  console.log('hello');
+
+  currentItem = Math.floor(Math.random() * reviews.length);
+  showPerson(currentItem);
+}); */

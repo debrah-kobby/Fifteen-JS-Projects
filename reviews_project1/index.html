@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starter</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <article class="container">
+        <div class="title">
+          <h2>our reviews</h2>
+          <div class="underline"></div>
+        </div>
+        <div class="add_a_review">
+          <button class="add_a_review_button">Add a review</button>
+        </div>
+        <section class="review">
+          <div class="img-container">
+            <img src="" id="person-img" alt="Author Image" />
+          </div>
+          <h4 id="author"></h4>
+          <p id="job"></p>
+          <p id="info"></p>
+
+          <div class="button-container">
+            <button class="prev-btn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="next-btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </section>
+      </article>
+      <article class="reviewForm">
+        <div class="title title2">
+          <div>
+            <h3>Your reviews</h3>
+            <div
+              class="underline"
+              style="background-color: rgb(37, 37, 243)"
+            ></div>
+          </div>
+          <div class="closeBtn_div">
+            <button class="closeBtn">&times;</button>
+          </div>
+        </div>
+
+        <form class="actual_form">
+          <div class="name_input_label">
+            <label for="name" class="name_label_form">Name: </label
+            ><input
+              type="text"
+              name="name"
+              id="name"
+              class="form_imputs"
+              placeholder="Enter review author name"
+              required
+            />
+          </div>
+          <div class="image_and_job_div">
+            <div
+              class="image_on_form_div name_input_label"
+              style="margin-top: 0.8rem"
+            >
+              <label
+                for="image"
+                class="name_label_form"
+                style="margin-left: 0.3rem"
+                >Upload Picture</label
+              >
+
+              <input type="file" id="image" accept="image/*" hidden required />
+
+              <label for="image" class="custom-file-upload">
+                Choose Image
+              </label>
+              <span id="file-chosen">No file chosen</span>
+            </div>
+            <div class="job_on_form name_input_label">
+              <label for="job" class="name_label_form">Job:</label>
+              <input
+                type="text"
+                for="job"
+                placeholder="authors job"
+                class="form_imputs job"
+                required
+                
+              />
+            </div>
+          </div>
+          <div
+            class="autors_actual_review name_input_label"
+            style="margin-top: 0.8rem"
+          >
+            <label for="authorsreview" class="name_label_form">Review</label>
+            <textarea
+              name="authorsreview"
+              id="authorsreview"
+              class="form_imputs"
+              rows="3"
+              cols="10"
+              required
+            ></textarea>
+          </div>
+          <div class="submit_button_form">
+            <button class="submitBtn">Submit</button>
+          </div>
+        </form>
+      </article>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
