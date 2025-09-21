@@ -2,43 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Ensures proper text rendering and character encoding -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the site responsive by adjusting layout based on device width -->
+
     <title>Navbar</title>
-    <!-- font-awesome -->
+
+    <!-- font-awesome for icons (hamburger, social media, etc.) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
 
-    <!-- styles -->
+    <!-- External CSS file containing navbar styles -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- NAVIGATION BAR -->
     <nav>
       <div class="nav-center">
-        <!-- nav header -->
+        <!-- ========== NAV HEADER ========== -->
+        <!-- Contains logo + menu toggle button -->
         <div class="nav-header">
+          <!-- Site/brand logo -->
           <img src="./logo.svg" class="logo" alt="logo" />
+
+          <!-- Button used on small screens to toggle menu visibility -->
           <button class="nav-toggle">
+            <!-- FontAwesome hamburger icon -->
             <i class="fas fa-bars"></i>
           </button>
         </div>
-        <!-- links -->
+
+        <!-- ========== NAV LINKS ========== -->
+        <!-- Default links for site navigation -->
         <ul class="links">
-          <li>
-            <a href="index.html">home</a>
-          </li>
-          <li>
-            <a href="about.html">about</a>
-          </li>
-          <li>
-            <a href="projects.html">projects</a>
-          </li>
-          <li>
-            <a href="contact.html">contact</a>
-          </li>
+          <li><a href="index.html">home</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="projects.html">projects</a></li>
+          <li><a href="contact.html">contact</a></li>
         </ul>
-        <!-- social media -->
+
+        <!-- ========== SOCIAL MEDIA ICONS ========== -->
+        <!-- Links to external social platforms -->
         <ul class="social-icons">
           <li>
             <a href="https://www.twitter.com">
@@ -68,7 +75,9 @@
         </ul>
       </div>
     </nav>
-    <!-- javascript -->
+
+    <!-- JAVASCRIPT -->
+    <!-- Controls navbar interactivity (like opening/closing menu) -->
     <script src="app.js"></script>
   </body>
 </html>
